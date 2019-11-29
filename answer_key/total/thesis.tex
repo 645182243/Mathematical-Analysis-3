@@ -1,0 +1,90 @@
+\documentclass[11pt,UTF8]{article}
+\input{setting.tex}
+
+\title{Answer Key}								% Title
+\author{\emph{Circle}}								% Author
+\date{\ \today}											% Date
+
+%pdf文件设置
+\hypersetup{
+	pdfauthor={袁磊祺},
+	pdftitle={Answer Key}
+}
+
+
+\makeatletter
+\let\athetitle\@title
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+
+
+\begin{document}
+
+% \input{setc.tex}
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 0.5]{fig/pkured.pdf}\\[1.0 cm]	% University Logo
+    \textsc{\LARGE Peking University}\\[2.0 cm]	% University Name
+	\textsc{\Large College of Engineering}\\[0.5 cm]				% Course Code
+	\textsc{\large Mathematical Analysis (3)}\\[0.5 cm]				% Course Name
+	\rule{\linewidth}{0.5 mm} \\[0.8 cm]
+	{ \huge \bfseries \athetitle}\\[0.4 cm]
+	\rule{\linewidth}{0.5 mm} \\[1 cm]
+	\centering
+		\large
+		\href{mailto:circlelq@pku.edu.cn}{\faEnvelope}\quad \theauthor\\[0.5 cm]
+		\thedate\\[2 cm]
+	 
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
+
+
+\section{}
+
+\input{../homework1/main1.tex}
+
+\section{}
+
+\input{../homework2/main2.tex}
+
+\section{}
+
+\input{../homework3/main3.tex}
+
+
+\section{}
+
+\input{../homework4/main4.tex}
+
+
+\section{}
+
+\input{../homework5/main5.tex}
+
+
+\section{}
+
+\input{../homework6/main6.tex}
+
+
+\section{}
+
+\input{../homework7/main7.tex}
+
+\section{}
+
+\input{../homework8/main8.tex}
+
+\end{document}

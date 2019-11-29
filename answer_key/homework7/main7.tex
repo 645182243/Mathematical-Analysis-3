@@ -1,0 +1,86 @@
+\subsection{Lec 14}
+    \begin{enumerate}[1]
+    \item
+    $\me^{\cos x}\cos (\sin x)=\me^{\cos x}\frac{\me^{i\sin x}+\me^{-i\sin x}}{2}=\frac{1}{2} \left(\me^{\me^{ix}}+\me^{\me^{-ix}}\right)=\sum\limits_{n=0}^\infty\frac{1}{2}\frac{(\me^{ix})^n+(\me^{-ix})^n}{n!}=\sum\limits_{n=0}^\infty\frac{1}{2}\frac{\me^{inx}+\me^{-inx}}{n!}\\=\sum\limits_{n=0}^\infty\frac{\cos (nx)}{n!}$
+
+    \item
+    Let $f(x+c)=\frac{a'_0}{2}+\sum\limits_{n=1}^\infty a'_n \cos (nx)+b'_n \sin (nx)=\frac{a_0}{2}+\sum\limits_{n=1}^\infty a_n \cos [n(x+c)]+b_n \sin [n(x+c)]= \frac{a_0}{2} + \sum\limits_{n=1}^\infty {[a_n\cos (nc)+b_n\sin (nc)]\cos (nx)+[b_n\cos (nc)-a_n\sin (nc)]\sin (nx)}$
+    \par $\therefore$ $a'_0=a_0,\ a'_n=a_n\cos (nc)+b_n\sin (nc),\ b'_n=b_n\cos (nc)-a_n\sin (nc)$
+    
+    \item
+    $\pi-x=\sum\limits_{n=1}^\infty \frac{2}{n}\sin (nx),\ x \in (0,2\pi)$
+    \par $\therefore$ $\frac{1}{2\pi}\int_{0}^{2\pi} f(x)(\pi-x) \dif x=\frac{1}{2\pi}\int_{0}^{2\pi} \sum\limits_{n=1}^\infty \frac{2}{n}b_n \sin ^2(nx) \dif x$
+    \par $\because$ $\sum\limits_{n=1}^\infty \frac{2}{n}b_n \sin ^2(nx)$ is controlled by $\sum\limits_{n=1}^\infty \frac{2}{n}b_n$ and Lec 13 Prob 04's conclusion only needs $f(x)$ to be integrable.
+    \par $\therefore$ $\sum\limits_{n=1}^\infty \frac{2}{n}b_n \sin ^2(nx)$ uniformly converges
+    \par $\therefore$ $\frac{1}{2\pi}\int_{0}^{2\pi} f(x)(\pi-x) \dif x=\frac{1}{2\pi} \sum\limits_{n=1}^\infty \int_{0}^{2\pi}  \frac{2}{n}b_n \sin ^2(nx) \dif x=\sum\limits_{n=1}^\infty\frac{b_n}{n}$\qed
+    
+    \item
+        \begin{enumerate}[(1)]
+        \item
+        Apply periodic extension to $f(x)$ and set $f(2n\pi)=0$, which won't change Fourier series
+        \par $\because$ $\sigma_n(x)=\frac{1}{2n\pi} \int_{-\pi}^{\pi} f(x+t)\left(\frac{\sin \left(\frac{nt}{2}\right)}{\sin \frac{t}{2}}\right)^2 \dif x ,\ \frac{1}{2n\pi} \int_{-\pi}^{\pi}\left(\frac{\sin \left(\frac{nt}{2}\right)}{\sin \frac{t}{2}}\right)^2 \dif x =1,\ |f(x+t)|\leqslant \frac{\pi}{2}$
+        \par $\therefore$ $|\sigma_n(x)|\leqslant \frac{\pi}{2}$\qed
+        
+        \item
+        Due to pointwise convergence, $\sum\limits_{n=1}^\infty \frac{\sin (nx)}{n}=\begin{cases}f(x),\ 0<x<2\pi\\0,\ x=0 \end{cases}$
+        \par $\therefore$ $\left|\sum\limits_{n=1}^\infty \frac{\sin (nx)}{n}\right|<\frac{\pi}{2},\ 0\leqslant x<2\pi$
+        \par $\because$ $\left|\sum\limits_{n=1}^\infty \frac{\sin (nx)}{n}\right|$ is $2\pi$-periodic
+        \par $\therefore$ $\left|\sum\limits_{n=1}^\infty \frac{\sin (nx)}{n}\right|<\frac{\pi}{2}+1,\ x\in \mathbb{R}$\qed
+        \end{enumerate}
+    \end{enumerate}
+
+\subsection{Lec 15}
+    \begin{enumerate}[1]
+    \item
+        \begin{enumerate}[(1)]
+        \item
+        $a_n = \int_{-\pi}^{\pi} f(x) \cos (nx)\dif x=-\frac{1}{n}\int_{-\pi}^{\pi} f'(x)\sin (nx)\dif x = -\frac{b'_n}{n} $
+        \par $b_n =\int_{-\pi}^{\pi} f(x) \sin (nx)\dif x=\frac{1}{n}\int_{-\pi}^{\pi} f'(x)\cos (nx)\dif x = \frac{a'_n}{n}$ 
+        \par (ignore discontinuous points of $f'$) \qed
+        
+        \item
+        Lec 13 Prob 04's conclusion can be extended as $\sum\limits_{n=1}^\infty \left|\frac{a'_n}{n}\right|$ and $\sum\limits_{n=1}^\infty \left|\frac{b'_n}{n}\right|$ converges, thus the convergence of $\sum\limits_{n=1}^\infty (|a_n|+|b_n|)$ is straightforward \qed
+        
+        \item
+        $|\frac{a_0}{2}|+\sum\limits_{n=1}^\infty (|a_n|+|b_n|)$ converges $\Rightarrow$ $\frac{a_0}{2}+\sum\limits_{n=1}^\infty [a_n\cos (nx)+b_n\sin (nx)]$ absolutely uniformly converges
+        \par $\because$ $\frac{a_0}{2}+\sum\limits_{n=1}^\infty [a_n\cos (nx)+b_n\sin (nx)]$ pointwise converges to $f(x)$
+        \par $\therefore$ $\frac{a_0}{2}+\sum\limits_{n=1}^\infty [a_n\cos (nx)+b_n\sin (nx)]$ uniformly converges to $f(x)$ \qed
+        \end{enumerate}
+    
+    
+    \item
+        \begin{enumerate}[(1)]
+        \item
+        Due to symmetry, $b_n=0$
+        \par $ a_0 = \frac{2}{\pi} \int_{0}^{\pi} \sin x \dif x = \frac{4
+        }{\pi} $
+        \par $a_n=\frac{2}{\pi} \int_{0}^{\pi} \sin x\cos (nx) \dif x=\begin{cases}0,\ n=1\\\frac{2}{\pi}\frac{(-1)^{n+1}-1}{n^2-1},\ n\neq 1\end{cases}$
+        \par $ f(x)= \frac{2}{\pi} - \sum\limits_{n=1}^\infty \frac{4}{\pi (4n^2-1)} \cos 2nx $
+        \par $\because$ the Fourier series is controlled by $\sum\limits_{n=2}^\infty \frac{4}{\pi(n^2-1)}$
+        \par $\therefore$ uniformly converges
+        \par $\because$ $f(x)$ continuous
+        \par $\therefore$ the Fourier series pointwise thus uniformly converges to $f(x)$
+        
+        \item
+        Due to symmetry, $a_n=0$
+        \par $b_n=\frac{2}{\pi} \int_{0}^{\pi} x(\pi-x)\sin (nx) \dif x=\frac{4[1-(-1)^n]}{n^3\pi}$
+        \par $ f(x)=  \sum\limits_{n=1}^\infty \frac{8}{\pi (2n-1)^3} \sin (2n-1)x$
+        \par $\because$ the Fourier series is controlled by $\sum\limits_{n=1}^\infty \frac{8}{n^3\pi}$
+        \par $\therefore$ uniformly converges
+        \par $\because$ $f(x)$ continuous
+        \par $\therefore$ the Fourier series pointwise thus uniformly converges to $f(x)$
+        \end{enumerate}
+    
+    \item
+    Let $f(x)=\sum\limits_{n=1}^\infty b_n\sin (nx),\  f'(x)= \sum \limits_{n=1}^\infty a'_n\cos (nx),\ f''(x)=\sum\limits_{n=1}^\infty b''_n\sin (nx),\  f'''(x)= \sum \limits_{n=1}^\infty a'''_n\cos (nx)$
+    \par $a'_n=\frac{2}{\pi} \int_{0}^{\pi} f'(x) \cos (nx)\dif x=\frac{2n}{\pi} \int_{0}^{\pi} f(x) \sin (nx)\dif x=nb_n$
+    \par $b''_n=\frac{2}{\pi} \int_{0}^{\pi} f''(x) \sin (nx)\dif x=-\frac{2}{\pi} \int_{0}^{\pi} f'(x) \cos (nx)\dif x=-na'_n=-n^2b_n$
+    \par $a'''_n=\frac{2}{\pi} \int_{0}^{\pi} f'''(x) \cos (nx)\dif x=\frac{2n}{\pi} \int_{0}^{\pi} f''(x) \sin (nx)\dif x=nb''_n$
+    \par apply Lec 13 Prob 04's conclusion $\sum\limits_{n=1}^\infty \left|\frac{b''_nn}{n}\right|  $ convergent
+    \par $\therefore \sum\limits_{n=1}^\infty \left|b_n\right|,\ \sum\limits_{n=1}^\infty\left|a'_n\right|,\ \sum\limits_{n=1}^\infty\left|b''_n\right|$ convergent
+    \par $\therefore$ the Fourier series of $f(x),\ f'(x),\ f''(x)$ are uniformly convergent relatively to the original function and their coefficients are results of term-by-term differentiation of $f(x)$ 
+    \par$\therefore$ the Fourier series of $f(x)$ is $2^{\text{nd}}$ order termwise differentiable
+    \par $\because$ $a'_n=nb_n$ and $\sum\limits_{n=1}^\infty a_{n}^{'2}$ converges
+    \par $\therefore$ $\sum\limits_{n=1}^\infty n^2b_n^2$ converges\qed
+    \end{enumerate}
+

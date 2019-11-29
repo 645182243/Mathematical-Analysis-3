@@ -1,0 +1,186 @@
+\subsection{Lec 03}
+
+ \begin{enumerate}[1]
+   \item
+   \begin{enumerate}[(1)]
+     \item[(2)]
+     $\ln (1+\frac{1}{n})=\frac{1}{n}-\frac{1}{2n^2}+\frac{1}{3n^3}-\frac{1}{4n^4}+o(\frac{1}{n^4})$
+     \par $\therefore$ $a_n=\frac{1}{12n^2}+o(\frac{1}{n^2})$
+     \par $\therefore$ $\lim\limits_{n\rightarrow{\infty}}\frac{a_n}{\frac{1}{12n^2}}=1$
+     \par $\therefore$ absolutely convergent
+
+     \item[(3)]
+     $\ln [(1+\frac{1}{n})^n]=n \ln (1+\frac{1}{n})=1-\frac{1}{2n}+o(\frac{1}{n})$
+     \par $\therefore$ $(1+\frac{1}{n})^n=e^{1-\frac{1}{2n}+o(\frac{1}{n})}=e-\frac{e}{2n}+o(\frac{1}{n})$
+     \par $\therefore$ $\lim\limits_{n\rightarrow{\infty}}\frac{a_n}{(\frac{e}{2n})^p}=1$
+     \par $ \begin{cases} p>1:\text{absolutely convergent}\\ p \leqslant 1:\text{divergent} \end{cases} $
+   \end{enumerate}
+
+   \item
+   \begin{enumerate}[(1)]
+     \item
+     $\lim\limits_{n\rightarrow{\infty}}\sqrt[n]{(1-\frac{1}{n})^{n^2}}=\lim\limits_{n\rightarrow{\infty}}(1-\frac{1}{n})^n=\frac{1}{e}<1$
+     \par $\therefore$ absolutely convergent
+
+     \item
+     $\frac{a_{n+1}}{a_n}=\frac{x}{1+x^n}$
+     \par $\begin{cases} x<1:\lim\limits_{n\rightarrow{\infty}}\frac{x}{1+x^n}=x<1,\text{absolutely convergent}
+     \\x=1:\lim\limits_{n\rightarrow{\infty}}\frac{x}{1+x^n}=\frac{1}{2},\text{absolutely convergent}
+     \\x>1:\lim\limits_{n\rightarrow{\infty}}\frac{x}{1+x^n}=0,\text{absolutely convergent} \end{cases}$
+   \end{enumerate}
+
+   \item
+   \begin{enumerate}[(1)]
+     \item
+     $\int_{2}^{\infty} 3^{-x^{\frac{1}{2}}} \dif x=\int_{\sqrt{2}}^{\infty} 2t\cdot 3^{-t} \dif t$
+     \par $\therefore$ absolutely convergent
+
+     \item
+     $\frac{1}{a^{\ln x}}=\frac{1}{x^{\ln a}}$
+     \par $\begin{cases} a>e:\ln a>1,\text{absolutely convergent}\\a\leqslant e:\ln a\leqslant 1,\text{divergent} \end{cases}$
+   \end{enumerate}
+
+   \item
+   \begin{enumerate}[(1)]
+     \item
+     $\lim\limits_{n\rightarrow{\infty}}a_n=\frac{1}{2}$
+     \par $\therefore$ divergent
+
+     \item[(4)]
+     $\lim\limits_{n\rightarrow{\infty}}\frac{\frac{1}{n \sqrt[n]{n}}}{\frac{1}{n}}=1$
+     \par $\therefore$ divergent
+
+     \item[(5)]
+     For $n>1000,\ln (n+1)>2$
+     \par $\therefore$ $\frac{1}{[\ln (n+1)]^n}<\frac{1}{2^n}$
+     \par $\therefore$ absolutely convergent
+   \end{enumerate}
+
+   \item[6]
+   \begin{enumerate}[(1)]
+     \item[(3)]
+     $\int \frac{1}{x\ln x(\ln \ln x)} \dif x=\ln \ln \ln x+C$
+     \par $\therefore$ for $\sigma \leqslant 0$, divergent
+     \par $\sum\limits_{n=2}^{\infty}\frac{1}{n(\ln n)^{1+\sigma}}\leqslant10+\sum\limits_{k=2}^{\infty}\sum\limits_{n=2^{k-1}+1}^{2^k}\frac{1}{n(\ln n)^{1+\sigma}}\\
+     \leqslant 10+\sum\limits_{k=2}^{\infty}\sum\limits_{n=2^{k-1}+1}^{2^k}\frac{1}{2^{k-1}[\ln (2^{k-1})]^{1+\sigma}}\\
+     \leqslant 10+\sum\limits_{k=2}^{\infty}\frac{1}{[\ln (2^{k-1})]^{1+\sigma}}\\
+     =10+\sum\limits_{k=2}^{\infty}\frac{1}{(k-1)^{1+\sigma}}$
+     \par $\therefore$ for $\sigma>0, \sum\limits_{n=2}^{\infty}\frac{1}{n(\ln n)^{1+\sigma}}$ absolutely convergent
+     \par Also $\because$ for $\forall p>0, \exists X>0, \forall x>X, (\ln x)^p>\ln \ln x$
+     \par $\therefore$ for $\sigma>0$, absolutely convergent
+
+     \item[(4)]
+     Let $p=1$, $\int_2^{\infty}\frac{1}{x\ln x(\ln \ln x)^q}\dif x=\int_{\ln 2}^{\infty}\frac{\dif t}{t(\ln t)^q}$
+     \par $\therefore$ similar to the condition in previous problem
+     \par In conclusion: 
+     \par $\begin{cases}p>1:\text{absolutely convergent}\\
+     p=1:\begin{cases}q>1:\text{absolutely convergent}\\q\leqslant 1:\text{divergent}\end{cases}
+     \\p<1:\text{divergent}        \end{cases}$
+   \end{enumerate}
+ \end{enumerate}
+
+\subsection{Lec 04}
+ \begin{enumerate}[1]
+   \item[2]
+   \begin{enumerate}[(1)]
+     \item
+     $(k^2-1)a_{k^2-1}=\frac{1}{k^2-1},\ k^2a_{k^2}=1$
+     \par $\exists \varepsilon =\frac{1}{2}, \forall N>0, \exists k>N, \left|1-\frac{1}{k^2-1}\right|>\varepsilon$
+     \par $\therefore \lim\limits_{n\rightarrow\infty}a_n$ doesn't exist \qed
+     \item
+     Let $b_k=\left[\frac{1}{k^2}+\sum\limits_{n=k^2+1}^{(k+1)^2-1}\frac{1}{n^2}\right]$
+     \par Evidently $b_k$ is absolutely convergent
+     \par Use conclusion of Lec 02 Problem 05
+     \par $\therefore$ absolutely convergent \qed
+   \end{enumerate}
+
+   \item[3]
+   \begin{enumerate}[(1)]
+     \item
+     Evidently $\lim\limits_{n\rightarrow\infty}x_n$ exists. Let $x_n\rightarrow A$
+     \par $\therefore$ $\lim\limits_{n\rightarrow{\infty}}\frac{1-\frac{x_n}{x_{n+1}}}{\frac{x_{n+1}-x_n}{A}}=1$
+     \par $\because$ $\sum\limits_{n=1}^\infty\frac{x_{n+1}-x_n}{A}=1-\frac{x_1}{A}$, converge
+     \par $\therefore$ absolutely convergent \qed
+
+     \item
+     $\exists \varepsilon=\frac{1}{2}, \forall N>0,\  \exists n_1,\ n_2>N,\  \sum\limits_{n=n_1}^{n_2}(1-\frac{x_n}{x_{n+1}})>\frac{x_{n_2}-x_{n_1}}{x_{n_2}}>\varepsilon$
+     \par $\therefore$ divergent \qed
+   \end{enumerate}
+
+   \item[4]
+   \begin{enumerate}[(1)]
+     \item
+     Let $b_k=a_{3k+1}+a_{3k+2}+a_{3k+3}$
+     \par $\left|b_k\right|$ monotonically decreases to $0$ and $\sgn (\frac{b_k}{b_{k-1}})=-1$
+     \par Use the conclusion of Lec 04 Problem 05, $a_n$ converges
+     \par $\because$ $\left|a_n\right|=\frac{1}{n}$
+     \par $\therefore$ conditionally convergent
+
+     \item
+     For $a\not= 0$, $n\sqrt{1+\frac{a^2}{n^2}}=n+\frac{a^2}{2n}+o(\frac{1}{n})$
+     \par $\therefore$ $a_n=(-1)^n\sin (\frac{\pi a^2}{2n})+o(\frac{1}{n})$
+     \par $\left|a_n\right|$ monotonically decreases to $0$ and $\sgn (\frac{a_n}{a_{n-1}})=-1$
+     \par $\therefore$ $a_n$ converges
+     \par $\because$ $\lim\limits_{n\rightarrow{\infty}}\frac{\sin \frac{\pi a^2}{2n}}{\frac{1}{100n}}>1$
+     \par $\therefore$ In conclusion:
+     \par $\begin{cases} 
+      a \not= 0:\text{conditionally convergent}
+      \\a = 0:\text{absolutely convergent}
+      \end{cases}$
+
+     \item
+     $\ln \left(1+\frac{(-1)^n}{n^p}\right)=\frac{(-1)^n}{n^p}-\frac{1}{n^{2p}}+o(\frac{1}{n^{2p}})$
+     \par For $p>0$, $\left|\frac{(-1)^n}{n^p}\right|$ monotonically decreases to $0$ and $\sgn \left( \frac{\frac{(-1)^n}{n^p}}{\frac{(-1)^{n-1}}{(n-1)^p}}\right) =-1$
+     \par $\sum\limits_{n=1}^{\infty}\frac{1}{n^{2p}}$ converges when $p>\frac{1}{2}$, diverges when $p\leqslant\frac{1}{2}$
+     \par $\sum\limits_{n=1}^{\infty}\frac{1}{n^{p}}$ converges when $p>1$, diverges when $p\leqslant 1$
+     \par For $p\leqslant 0$, evidently diverge
+     \par $\therefore$ In conclusion:
+     \par $\begin{cases}p \leqslant \frac{1}{2}:\text{divergent}
+     \\\frac{1}{2}<p\leqslant 1:\text{conditionally convergent}
+     \\p>1:\text{absolutely convergent}
+     \end{cases}$
+
+     \item
+     Let $b_k=|a_{2k-1}|+|a_{2k}|$, $0<b_k<\frac{1}{2^{k-1}}$
+     \par $\therefore$ $b_k$ converges
+     \par Use conclusion of Lec 02 Problem 05, $|a_n|$ converges
+     \par $\therefore$ absolutely convergent
+
+     \item
+     $\sum\limits_{n=1}^{2N}a_n < e-\sum\limits_{n=1}^{N}\frac{1}{2n}$
+     \par $\because$ $-\sum\limits_{n=1}^{N}\frac{1}{2n}\rightarrow -\infty$
+     \par $\therefore$ divergent
+
+     \item
+     $\because$ $|a_n|$ monotonically decreases to $0$ and $\sgn (\frac{a_n}{a_{n-1}})=-1$
+     \par $\therefore$ $a_n$ converges
+     \par $\because$ $|a_n|>\frac{1}{n}$
+     \par $\therefore$ conditionally convergent
+
+     \item
+     $\because$ $\int_{2}^{\infty}x^3 2^{-x}\dif x$ converges
+     \par $\therefore$ absolutely convergent
+
+     \item
+     $\because$ $|a_n|$ monotonically decreases to $0$ and $\sgn (\frac{a_n}{a_{n-1}})=-1$
+     \par $\therefore$ $a_n$ converges
+     \par $\because$ $|a_n|>\frac{1}{20n}$
+     \par $\therefore$ conditionally convergent
+
+     \item
+     $\because$ $|a_n|$ monotonically decreases to $0$ and $\sgn (\frac{a_n}{a_{n-1}})=-1$
+     \par $\therefore$ $a_n$ converges
+     \par $\because$ $\lim\limits_{n\rightarrow{\infty}}\frac{a_n}{\frac{1}{n}}=x$
+     \par $\therefore$ In conclusion:
+     \par $\begin{cases} 
+      x \not= 0:\text{conditionally convergent}
+      \\x = 0:\text{absolutely convergent}
+      \end{cases}$
+
+     \item
+     Let $b_k=a_{2k-1}+a_{2k}=\frac{2}{k-1}$
+     \par $\therefore$ divergent
+   \end{enumerate}
+
+   
+   \end{enumerate}

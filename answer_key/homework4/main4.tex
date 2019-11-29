@@ -1,0 +1,111 @@
+\subsection{Lec 07}
+\begin{enumerate}[1]
+    \item
+    \begin{enumerate}[(1)]
+        \item $\because \left|f_{n}(x)-|x|\right|=\left|\frac{1}{n^{2}(\sqrt{x^{2}+\frac{1}{n^{2}}}+|x|)}\right| \leq \frac{1}{n} $
+        \par $ \therefore  \lim \limits_{n \rightarrow \infty} \sup \limits_{x \in \mathcal{X}}\left|f_{n}(x)-|x|\right|=0$
+        \par $\therefore $ uniformly convergent 
+
+        \item $ \because  \sup \limits_{x \in \mathcal{X}}\left|f_{n}(x)-0\right|=\frac{1}{4}$
+        \par $\therefore $ not uniformly convergent 
+
+        \item $\because \left|f_{n}(x)-0\right| \leq \frac{1}{n+1} \left(\frac{n}{n+1}\right)^{n} \leq \frac{1}{n+1} $
+        \par $ \therefore  \lim \limits_{n \rightarrow \infty} \sup \limits_{x \in \mathcal{X}}\left|f_{n}(x)-0\right|=0$
+        \par $\therefore $ uniformly convergent 
+        
+        \item $ \because $ if $n>100,\  \lim \limits_{n \rightarrow \infty} \sup \limits_{x \in \mathcal{X}}\left|f_{n}(x)-0\right|= \lim \limits_{n \rightarrow \infty} \frac{\ln n}{n} = 0 $
+        \par $\therefore $ uniformly convergent     \end{enumerate}     
+
+    \item       
+        \begin{enumerate}[(1)]
+        \item       
+        $ S(x)= \begin{cases}  x,\ x \in [0,1)\\ 0,\ x=1 \end{cases} $is not continuous
+        \par $\therefore $ not uniformly convergent
+        
+        \item denote $ a_{n}(x)=\frac{x^{2}}{\left(1+x^{2}\right)^{n}},\ b_{n}(x)=(-1)^{n} $
+        \par  $\because$ if $n>2,\ \sup \limits_{x \in \mathcal{X}}|a_n(x)-0|<\frac{1}{n-1}$
+        \par $\therefore a_{n}(x) \stackrel{\mathcal{X}}{\longrightarrow} 0$
+        \par $\because a_n(x)$ is about $n$ monotonically decreasing and $\sum\limits_{n=1}^{\infty}b_n(x)$ is uniformly bounded
+        \par $\therefore $  uniformly convergent
+
+        \item $\because \left|\frac{\sin n x}{\sqrt[3]{n^{4}+x^{4}}}\right| \leq \frac{1}{n^{\frac{4}{3}}}$
+        \par $\therefore $ uniformly convergent
+
+        \item $\because \left|\frac{x}{1+n^{4} x^{2}}\right| \leq \frac{1}{n^{2}}$
+        \par $\therefore $ uniformly convergent
+
+        \item denote $ a_{n}(x)=\frac{1}{\sqrt{n+x}},\ b_{n}(x)=\sin nx \sin x$
+        \par  $\because \sin n x \sin x=\frac{\cos (n-1) x-\cos (n+1) x}{2}$ 
+        \par $\therefore $ $\sum\limits_{n=1}^{\infty}b_n(x)$ is uniformly bounded
+        \par $\because a_n(x)$ is about $n$ monotonically decreasing and $ a_{n}(x) \stackrel{\mathcal{X}}{\longrightarrow} 0$
+        \par $\therefore $  uniformly convergent
+
+        \item $\because \left|\frac{(-1)^{n}\left(1-e^{-n x}\right)}{n^{2}+x^{2}}\right| \leq\left|\frac{1}{n^{2}}\right|$
+        \par $\therefore $ uniformly convergent
+        \end{enumerate}
+
+    \item $\because \left|\frac{\ln (1+n x)}{n x^{n}}\right| \leq \frac{1}{x^{n-1}} \leq \frac{1}{\alpha^{n-1}}$
+    \par $\therefore $ uniformly convergent\qed
+
+    \item   
+    $\because f_0(x)$ is continuous over $[0,a]$
+    \par $\therefore \exists A$ s.t. $|f(x)|<A$
+    \par $\because f_{n}(x)=\int_{0}^{x} f_{n-1}(t)\dif t$ 
+    \par $\therefore \left|f_{n}(x)\right| \leq \frac{A x^{n}}{n !} \leq \frac{A a^{n}}{n !}$
+    \par $\therefore  f_n(x) \stackrel{\mathcal{X}}{\longrightarrow} 0$\qed
+
+    \item 
+    if $\sum \limits_{n=1}^{\infty} \left|f_{n}(x)\right|$ uniformly convergent
+    \par $\because \left|\sum \limits_{i=n}^{m} f_{i}(x)\right| \leq \sum \limits_{i=n}^{m}\left|f_{i}(x)\right|$
+    \par $\therefore  \forall \epsilon >0,\ \exists N>0,\ \text{when} \ m,n>N, \ \forall x \in \mathcal{X} ,\ \left|\sum \limits_{i=n}^{m} f_{i}(x)\right| \leq \sum \limits_{i=n}^{m}\left|f_{i}(x)\right|<\epsilon $
+    \par $\therefore \sum \limits_{n=1}^{\infty} f_{n}(x)$ uniformly convergent\qed
+    \par but the inverse is not true, for example $f_n(x) =  \frac{(-1)^{n} x}{n}$\qed
+\end{enumerate}
+
+
+\subsection{Lec 08}
+
+\begin{enumerate}[1]
+    \item denote $a_n= \max (|\varphi _n(a)|,|\varphi_n(b)|)$
+    \par $\because \varphi_n(x) $ is about $x$  monotonous over $[a,b]$
+    \par $\therefore |\varphi _n(x)| \leq a_n \leq |\varphi _n(a)|+|\varphi_n(b)|$
+    \par $\because \sum \limits_{n=1}^{\infty} \left|\varphi_{n}(a)\right|,\ \sum \limits_{n=1}^{\infty} \left|\varphi_{n}(b)\right|$ is absolutely convergent
+    \par $\therefore $ uniformly convergent\qed
+
+    \item $ \forall a,b,\ 0<a<b, \ x \in [a,b]$
+    \par $\because 0<\frac{n}{\me^{xn}}\leq  \frac{n}{\me^{an}}$ and $\sum \limits_{n=1}^{\infty} \frac{n}{\me^{an}}$ is convergent
+    \par $\therefore \sum \limits_{n=1}^{\infty} n\me ^{-nx}$ is uniformly convergent over $(0,+\infty)$
+    \par $\because n\me ^{-nx}$ is continuous
+    \par $\therefore $ continuous\qed
+
+    \item denote $ a_{n}(x)=\frac{\sin n x}{n^{3}}$
+    \par $\because \left|a_{n}(x)\right| \leq \frac{1}{n^{3}}$
+    \par $\therefore \sum \limits_{n=1}^{\infty} a_n(x)$ is uniformly convergent
+    \par $\because a_n(x)$ is continuous $\therefore f(x)$ is continuous
+    \par $\because \left|a'_{n}(x)\right| \leq \frac{1}{n^{2}}  \therefore \sum \limits_{n=1}^{\infty} a'_n(x)$ is uniformly convergent
+    \par $\therefore f'(x)=\sum \limits_{n=1}^{\infty} a'_n(x)$
+    \par $\because a'_n(x)$ is continuous $\therefore f'(x)$ is continuous\qed
+
+    \item for $n>1,\ \forall m \in \mathbb{N} \because \frac{\dif \, ^{m}}{\dif  x^{m}}\left(\frac{1}{n^{x}}\right)=\frac{\dif \, ^{m}}{\dif  x^{m}}\left(e^{x}\right)^{-\ln n}=(-\ln n)^{m}\left(e^{x}\right)^{-\ln n}=(-\ln n)^{m} \frac{1}{n^{x}}$
+    \par $\therefore \forall \alpha>1,\ \text{when}\  x\geq \alpha,\ \left| \frac{\dif \, ^{m}}{\dif  x^{m}}\left(\frac{1}{n^{x}}\right)\right| \leq (\ln n)^{m} \frac{1}{n^{\alpha}}$
+    \par $\because \sum \limits_{n=1}^{\infty} (\ln n)^{m} \frac{1}{n^{\alpha}}$ is convergent and $ (\ln n)^{m} \frac{1}{n^{x}} $ is continuous
+    \par $\therefore \sum \limits_{n=1}^{\infty} \frac{\dif \, ^{m}}{\dif  x^{m}}\left(\frac{1}{n^{x}}\right)$ uniformly convergent
+    \par $\therefore \zeta^{(n)}(x)$ is continuous\qed
+
+    \item $\because \left|\frac{\sin \left(2^{n} \pi x\right)}{2^{n}}\right| \leq \frac{1}{2^{n}} \therefore $ uniformly convergent
+    \par $\because \frac{\dif}{\dif x}\frac{\sin \left(2^{n} \pi x\right)}{2^{n}}=\pi \cos \left(2^{n} \pi x\right)$
+    \par $ \lim \limits_{n \to +\infty}\pi \cos \left(2^{n} \pi x\right) = \begin{cases}  \text{not exists},\ x \not= \frac{m}{2^k},\ m,k \in \mathbb{Z}\\ \pi ,\ x = \frac{m}{2^k},\ m,k \in \mathbb{Z} \end{cases} \not= 0$
+    \par $\therefore $ can't doing derivation at every formula \qed
+
+    \item 
+    if $|x| = 1,\ f(x)=\int_{-\pi}^{\pi} \frac{1-x^{2}}{1+x^{2}-2 x \cos \theta}\dif \theta=0$
+    \par if $|x| < 1,\ f(x) = \int_{-\pi}^{\pi} 1+ 2\sum \limits_{n=1}^{\infty}  x^n \cos n\theta \dif \theta$
+    \par $\because | x^n \cos n\theta|\leq |x^n|,\ \sum \limits_{n=1}^{\infty} |x^n| $ is convergent
+    \par $\therefore \sum \limits_{n=1}^{\infty} x^n \cos n\theta $ is about $\theta$ uniformly convergent
+    \par $\therefore f(x) =2\pi+ 2\sum \limits_{n=1}^{\infty}  \int_{-\pi}^{\pi}x^n \cos n\theta \dif \theta=2\pi$
+    \par if $|x|> 1,\ f(x)=-2\pi$
+    \par in conclusion
+    \par $f(x)=\begin{cases}  0,\ |x| = 1\\ 2\pi ,\ |x| <1 \\-2\pi,\ |x|>1 \end{cases} $
+
+\end{enumerate}
+

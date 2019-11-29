@@ -1,0 +1,144 @@
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{commath}%定义d
+%\usepackage[UTF8]{ctex}
+\usepackage{geometry}   
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{paralist}
+\usepackage{multirow}
+\usepackage{booktabs} % To thicken table lines
+\usepackage{diagbox}
+\usepackage{authblk}
+\usepackage{indentfirst}
+\usepackage{float}
+\usepackage{amsthm}
+\usepackage{fontspec}
+\usepackage{color}
+\usepackage[perpage]{footmisc}%脚注每页清零
+%\usepackage{txfonts} %设置字体为times new roman
+\usepackage{lettrine}
+\usepackage{nameref}
+%\usepackage[nottoc]{tocbibind}
+\usepackage{amssymb}%font
+\usepackage{lipsum}%make test words
+\usepackage{picinpar}%words around the picture
+\usepackage[all]{xy}%draw arrow
+\usepackage{asymptote}%draw picture
+\usepackage{fontawesome}
+\usepackage{titletoc}
+\usepackage{fourier-orns}
+\usepackage{nameref}
+\geometry{bottom=4cm}
+
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+%\lhead{\bfseries\rightmark}
+
+
+%\setmainfont{Times New Roman}
+
+%\ctexset{today=small}%日期类型设置
+
+% ======================================
+% = Color de la Universidad de Sevilla =
+% ======================================
+\usepackage{tikz}
+\definecolor{PKUred}{RGB}{126,24,28}
+
+%超链接设置
+\usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=PKUred,urlcolor=black,pagebackref,bookmarksnumbered]{hyperref}
+
+
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat{\section}{\LARGE\sffamily\bfseries}{\hspace{-15pt}\textcolor{PKUred}{\vrule width 4pt height 20pt}\hsp\arabic{section}}{10em}{}
+
+\titleformat{\subsection}{\normalfont\large\bfseries}{}{-5pt}{}
+
+\titlecontents{section}[0pt]{\addvspace{1pc}%
+\sffamily}%
+{\contentsmargin{0pt}%
+\bfseries\makebox[0pt][r]{\Large\thecontentslabel\enspace}%
+}{}
+{} [\addvspace{1pt}]
+
+
+\titlecontents{subsection}
+[0.2em] % ie, 1.5em (chapter) + 2.3em
+{}{} {} {\titlerule*[1pc]{.}\contentspage}
+
+
+
+\iffalse　
+\renewcommand*\footnoterule{%
+    \vspace*{-3pt}%
+    {\color{PKUred}\hrule width 2in height 0.4pt}%
+    \vspace*{2.6pt}%
+}
+\fi
+\renewcommand*\headrule{%
+    {\color{PKUred}\hrule width \textwidth height 0pt}%
+    \vspace*{2.6pt}%
+}
+
+
+%% Color the bullets of the itemize environment and make the symbol of the third
+%% level a diamond instead of an asterisk.
+%h\renewcommand*\textbullet{\dag}
+\renewcommand*\labelitemi{\color{PKUred}\textbullet}
+\renewcommand*\labelitemii{\color{PKUred}--}
+\renewcommand*\labelitemiii{\color{PKUred}$\diamond$}
+\renewcommand*\labelitemiv{\color{PKUred}\textperiodcentered}
+
+
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}		% Equationnumbering: section.eq#
+\numberwithin{figure}{section}			% Figurenumbering: section.fig#
+\numberwithin{table}{section}				% Tablenumbering: section.tab#
+
+
+%代码设置
+\usepackage{listings}
+\usepackage{fontspec} % 定制字体
+\newfontfamily\menlo{Menlo}
+\usepackage{xcolor} % 定制颜色
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\lstset{ %
+backgroundcolor=\color{white},      % choose the background color
+basicstyle=\footnotesize\ttfamily,  % size of fonts used for the code
+columns=fullflexible,
+tabsize=4,
+breaklines=true,               % automatic line breaking only at whitespace
+captionpos=b,                  % sets the caption-position to bottom
+commentstyle=\color{mygreen},  % comment style
+escapeinside={\%*}{*)},        % if you want to add LaTeX within your code
+keywordstyle=\color{blue},     % keyword style
+stringstyle=\color{mymauve}\ttfamily,  % string literal style
+frame=single,
+rulesepcolor=\color{red!20!green!20!blue!20},
+% identifierstyle=\color{red},
+language=c++,
+xleftmargin=4em,xrightmargin=2em, aboveskip=1em,
+framexleftmargin=2em,
+numbers=left
+}
+
+%脚注
+\renewcommand\thefootnote{\fnsymbol{footnote}}
+
+%定义常数i、e、积分符号d
+\newcommand\mi{\mathrm{i}}
+\newcommand\me{\mathrm{e}}
