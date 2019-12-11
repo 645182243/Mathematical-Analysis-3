@@ -1,0 +1,92 @@
+\subsection{Lec 18}
+    \begin{enumerate}[1]
+    \item
+        \begin{enumerate}[(1)]
+        \item
+        $\int_0^{+\infty} \frac{ \sin ^4x}{x^2} \dif x =-\int_0^{+\infty}  \sin ^4 x\dif \frac{1}{x}=\int_0^{+\infty} \frac{4 \sin ^3x\cos x}{x}\dif x =\int_0^{+\infty} \frac{2 \sin ^2x \sin 2x}{x}\dif x=\int_0^{+\infty} \frac{ \sin 2x}{x}\dif x-\int_0^{+\infty}\frac{ \sin 2x\cos 2x}{x}\dif x=\frac{\pi}{2}-\frac{1}{2}\int_0^{+\infty}\frac{ \sin 4x}{x}\dif x=\frac{\pi}{4}$
+
+        \item[(3)]
+        $\int_0^{+\infty} (\frac{ \sin ax}{x})^2 \dif x=-\int_0^{+\infty}  \sin ^2ax \dif \frac{1}{x}=\int_0^{+\infty}\frac{2a \sin ax\cos ax}{x}\dif x=\int_0^{+\infty}\frac{a \sin 2ax}{x}\dif x=\frac{\pi |a|}{2}$
+
+
+        \item[(4)]
+        $\frac{1-\me^x}{x}=\int_0^1 \me^{-xt} \dif t$
+        \par $\therefore$ $\int_0^{+\infty} \frac{1-\me^x}{x}\cos x\dif x=\int_0^{+\infty}\int_0^1 \me^{-xt}\cos x \dif t\dif x=\int_0^1 \int_0^{+\infty} \me^{-xt}\cos x\dif x \dif t$
+        \par using Lec 18 Example 03, let $\alpha=t,\ \beta=1$
+        \par $\therefore$ $\int_0^1 \int_0^{+\infty} \me^{-xt}\cos x\dif x \dif t=\frac{1}{2}\int_0^1 \frac{1}{t^2+1} \dif t^2=\frac{\ln 2}{2}$
+        \end{enumerate}
+
+        \item
+        \begin{enumerate}[(1)]
+        \item
+        $I_n(a)=\int_0^{+\infty} \frac{\dif x}{(x^2+a^2)^n}$
+        \par $\therefore$ $I_n^{'}(a)=-2anI_{n+1}(a)$
+        \par $\because$ $I_1(a)=\frac{\pi}{2a}$
+        \par $\therefore$ assume that $I_n(a)=\frac{\pi (2n-3)!!}{2^n(n-1)!a^{2n-1}}$ and prove it using mathematical induction
+
+        \item
+        $\int_0^{+\infty} \frac{\me^{-ax^2}-\me^{-bx^2}}{x}\dif x=\int_0^{+\infty} \int_a^b x\me^{-x^2y} \dif y\dif x=\int_a^b \int_0^{+\infty} x\me^{-x^2y} \dif x\dif y=\int_a^b \frac{1}{2y}\dif y=\frac{1}{2}\ln \frac{b}{a}$
+
+        \item
+        $I_n(a)=\int_0^{+\infty} \me^{-ax^2}x^{2n}\dif x$
+        \par $\therefore I_n^{'}(a)=-I_{n+1}(a)$
+        \par $\because$ $I_0(a)=\frac{1}{2}\sqrt{\frac{\pi}{a}}$
+        \par $\therefore$ $I_n(a)=(-1)^n (\frac{1}{2}\sqrt{\frac{\pi}{a}})^{(n)}=\frac{\sqrt{\pi}(2n-1)!!}{2^{n+1} a^{n+\frac{1}{2}}}$
+
+        \item
+        $I_n(a)=\int_0^1 x^{a-1}(\ln x)^n\dif x$
+        \par $\therefore$ $I_n^{'}(a)=I_{n+1}(a)$
+        \par $\therefore$ $I_n(a)=[I_1(a)]^{(n-1)}=(-\frac{1}{a^2})^{(n-1)}=\frac{(-1)^nn!}{a^{n+1}}$
+        \end{enumerate}
+    \end{enumerate}
+
+\subsection{Lec 19}
+    \begin{enumerate}[1]
+        \item
+        \begin{enumerate}[(1)]
+        \item
+        $\phantom{=} \int_0^1 \sqrt{x^3(1-\sqrt{x})}\dif x\ (t=\sqrt{x},x=t^2)$
+        \par $=2\int_0^1 t^4(1-t)^{\frac{1}{2}} \dif t=2\beta(5,\frac{3}{2})=\frac{4!2^6}{11!!}$
+        \par $=\frac{512}{3465}$
+
+        \item[(3)]
+        $\phantom{=} \int_0^{+\infty} \frac{\dif x}{1+x^4}=\int_0^{+\infty} \frac{\dif x^{\frac{1}{4}}}{1+x}=\int_0^{+\infty} \frac{1}{4}\frac{x^{-\frac{3}{4}}}{1+x}\dif x\ (x=\frac{1}{1-t}-1=\frac{t}{1-t},\ t=1-\frac{1}{1+x}=\frac{x}{1+x})$
+        \par $=\frac{1}{4}\int_0^1 (1-t)^{-\frac{1}{4}}t^{-\frac{3}{4}} \dif t=\frac{1}{4}\beta(\frac{3}{4},\frac{1}{4})$
+        \par $=\frac{\sqrt{2}\pi}{4}$
+
+        \item[(4)]
+        $\phantom{=} \int_0^{\pi} \frac{\dif \theta}{\sqrt{3-\cos \theta}}\ (x=\frac{1-\cos \theta}{2},\ \cos \theta=1-2x)$
+        \par $=\int_0^1 \frac{\dif x}{\sqrt{2}\sqrt{x(1-x^2)}}\ (t=x^2,\ x=\sqrt{t}$)
+        \par $=\frac{1}{2\sqrt{2}}\int_0^1 t^{-\frac{3}{4}}(1-t)^{-\frac{1}{2}}\dif t$
+        \par $=\frac{\sqrt{2}}{4}\beta(\frac{1}{4},\frac{1}{2})$
+        
+        \item[(5)]
+        $\phantom{=} \int_0^{+\infty} \frac{x^{m-1}\dif x}{2+x^n}$
+        \par $=2^{\frac{m}{n}-1} \int_0^{+\infty} \frac{x^{m-1}\dif x}{1+x^n}\ (x=(t-1)^{\frac{1}{n}}$)
+        \par $=\frac{2^{\frac{m}{n}-1}}{|n|}\int_0^1 \frac{(\frac{1-x}{x})^{\frac{m}{n}-1}\dif x}{x}=\frac{2^{\frac{m}{n}-1}}{|n|}\beta(1-\frac{m}{n},\frac{m}{n})$
+        \par $=\frac{2^{\frac{m}{n}-1}}{|n|}\frac{\pi}{ \sin \frac{m}{n}\pi}$
+        
+        \item[(6)]
+        $\phantom{=} \int_0^{+\infty} \frac{\cosh 2qu}{(\cosh u)^{2p}}\dif u\ (\me^u=t,\ u=\ln t$)
+        \par $=2^{2p-1}\int_1^{+\infty} \frac{\frac{1}{t}(t^{2q}+t^{-2q})}{\frac{1}{t^{2p}}(1+t^2)^{2p}} \dif t\ (x=t^2,\ t=\sqrt{x}$)
+        \par $=2^{2p-2} \int_1^{+\infty} \frac{x^{p-1}(x^q+x^{-q})}{(1+x)^{2p}}\dif x\ (1+x=\frac{1}{t},\ t=\frac{1}{1+x}$)
+        \par $=2^{2p-2}\int_\frac{1}{2}^1 t^{2p}(\frac{1-t}{t})^{p-1}[(\frac{1-t}{t})^q+(\frac{1-t}{t})^{-q}]\frac{1}{t^2} \dif t$ (the two integral terms are equal)
+        \par $=2^{2p-2}\beta(p-q,p+q)$
+        
+        \item[(7)]
+        $\phantom{=} \int_{-1}^1 \frac{(1+x)^{2m-1}(1-x)^{2n-1}}{(1+x^2)^{m+n}}\dif x\ (x=\tan\theta$)
+        \par $=\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \frac{(\cos \theta+ \sin \theta)^{2m}(\cos \theta- \sin \theta)^{2n}}{(\cos \theta+ \sin \theta)(\cos \theta- \sin \theta)}\dif \theta=\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \frac{(1+ \sin 2\theta)^m(1- \sin 2\theta)^n}{\cos 2\theta}\dif \theta$
+        \par $=\frac{1}{2}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{(1+ \sin \theta)^m(1- \sin \theta)^n}{\cos \theta}\dif \theta=\frac{1}{2}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \frac{(1+ \sin \theta)^m(1- \sin \theta)^n}{\cos ^2\theta}\dif \sin \theta$
+        \par $=\frac{1}{2}\int_{-1}^1 (1+x)^{m-1} (1-x)^{n-1} \dif x\ (1+x=2t,\ t=\frac{1+x}{2}$)
+        \par $=\int_0^1 (2t)^{m-1}[2(1-t)]^{n-1} \dif t$
+        \par $=2^{m+n-2}\beta(m,n)$
+        \end{enumerate}
+        
+    \item
+    $\beta(r,p)\beta(r+p,q)=\frac{\Gamma(r)\Gamma(p)\Gamma(r+p)\Gamma(q)}{\Gamma(r+p)\Gamma(r+p+q)}=\frac{\Gamma(r)\Gamma(q)\Gamma(r+q)\Gamma(p)}{\Gamma(r+q)\Gamma(r+p+q)}=\beta(r,q)\beta(r+q,p)$\qed
+
+    \item 
+    $\phantom{=} \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}\left(\frac{\cos \theta+\sin \theta}{\cos \theta-\sin \theta}\right)^{\cos 2 \alpha} \dif \theta =\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}\left[\frac{\sin(\theta+\frac{\pi}{4})}{\cos(\theta+\frac{\pi}{4})}\right]^{\cos 2 \alpha} \dif \theta =\int_{0}^{\frac{\pi}{2}}(\tan \theta)^{\cos 2 \alpha} \dif \theta$ 
+    \par $ = \int_{0}^{\frac{\pi}{2}} (\sin t)^{\cos 2 \alpha}(\cos t)^{-\cos 2 \alpha} \dif \theta = \frac{1}{2}\beta(\frac{1+\cos 2 \alpha}{2},\frac{1-\cos 2 \alpha}{2}) = \frac{1}{2}\beta(\cos ^2 \alpha,\sin ^2 \alpha)$
+    \par $= \frac{\pi }{2\sin(\pi \cos^2 \alpha)}$
+\end{enumerate}
