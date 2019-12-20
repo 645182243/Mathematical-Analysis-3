@@ -1,0 +1,37 @@
+\subsection{P65}
+\begin{enumerate}[1]
+\item[5]
+    \begin{enumerate}[(i)]
+    \item
+    $|f(\bm{x})-f(\bm{y})|=0 \Rightarrow |\bm{x}-\bm{y}|=0 $
+
+    \item
+    $|\Dif f \cdot \dif \bm{x}|=|\dif f(\bm{x})| \geqslant c|\dif\bm{x}|$
+    \par $\therefore$ the absolute values of $\Dif f$'s eigenvalues are not smaller than c 
+
+    \item
+    $\because | f(\bm{x}) - f(\bm{0})| \geqslant c|\bm{x}| $
+    \par $\therefore \lim \limits_{|\bm{x}|\to +\infty} | f(\bm{x}) | = +\infty $
+    \par $\therefore \forall \bm{\xi} \in \mathbb{R}^n,\ \exists \bm{x}_0 \in \mathbb{R}^n $ s.t. $ \dif |f(\bm{x})-\bm{\xi}|^2\bigg|_{\bm{x} = \bm{x}_0}  = 2 [f(\bm{x}_0)-\bm{\xi}]^\text{T} \cdot\Dif f(\bm{x}_0)\cdot\dif \bm{x} = 0 $ 
+    \par $\because \Dif f \not= 0 $
+    \par $\therefore f(\bm{x}_0)=\bm{\xi} $\qed
+
+    \end{enumerate}
+\end{enumerate}
+
+\subsection{P79}
+\begin{enumerate}[1]
+    \item[3]
+    $S$ is bounded 
+    \par for $\forall \varepsilon >0 $, the accumulation points can be covered by a finite set of closed rectangles with total volume $V_0 <\frac{\varepsilon}{2}$
+    \par $\because$ if there are infinite points left in $S$, there will be an arbitrarily small region containing infinite points in $S$ outside previous rectangles, which contradicts to the fact that all accumulation points are already covered.
+    \par $\therefore$ the left points could be covered by another finite set of closed rectangles with total volume $V_1 <\frac{\varepsilon}{2}$ \qed
+\end{enumerate}
+
+\subsection{P88}
+\begin{enumerate}[1]
+    \item[4]
+    Negative
+    \par $f_n(x) = \frac{1}{x^2 + \frac{1}{n} } $ is integrable on $[0,1]$
+    \par $ \lim \limits_{n\to \infty} f_n(x) = \frac{1}{x^2} = f(x) $ is not integrable on  $[0,1]$\qed
+\end{enumerate}
