@@ -1,0 +1,31 @@
+\subsection{P117}
+\begin{enumerate}[1]
+    \item[2] 
+    \begin{enumerate}[(1)]
+        \item 做$f:R^2\rightarrow M$
+        $$f(x,y)=(x,y,\sqrt{x^2+y^2})$$则$f$为双射，且连续，$f$的逆也连续，所以$f$是同胚。所以M是二维流形。
+        \item 整个锥面不是二维流形。取$A$为满足$0\leqslant z<1$,$B$为满足$-1<z<0$的点集。A，B都是开集，且不相交。若存在从锥面到二维空间的同胚$f$，则$f(A),f(B)$ 为$R^2$中开集，且不相交，所以$f(A)\bigcap\overline{f(B)}=\emptyset$,但$f(0)\in f(A)$且由于连续性，所以$f(0)\in\overline{f(B)}$. 矛盾。\\  
+    \end{enumerate}
+
+    \item[6]
+    证：M是闭的。设$\overline{B_n}$为半径为n圆心在原点的闭球，$M_n=\overline{B_n}\bigcap M$,则$M_n$为有限闭集，所以是紧的。对$\forall x\in M_n,$,由于$Df$的秩是k，所以由隐函数定理，$\exists \text{开集}V_x\subseteq M,\text{开集}U_x\subseteq \Re^{n-k},\text{使得}V_x\cong U_x$,${V_x}$构成$M_n$的一个开覆盖，由$M_n$的紧性，存在有限子覆盖仍记作$\{V_x\}$.$G=\bigcup\limits_{n=1}^{\infty}\{V_x\}$为M的一个图册，所以M是n-k维流形。
+\end{enumerate}
+
+\subsection{P128}
+
+\begin{enumerate}[4]
+    \item
+    $\omega \wedge \cdot$ is a linear operation which maps $0$ to $0$
+    \par $\therefore$ Apparently $M_{\omega}$ is a linear subspace of $V$
+    \par $(\dim\{M_{\omega}\}<p):$ Let the first $q$ vectors of $\{e_1 \cdots e_n\}$ be the complete orthonormal basis of $M_{\omega}$
+    \par For $\omega=\sum\limits_{1\leqslant i_1 < \cdots < i_p \leqslant n} \omega_{i_1 \cdots i_p} e_{i_1}\wedge \cdots \wedge e_{i_p}$ and $e_k\in \{e_1 \cdots e_q\}$
+    \par $\delta_{i_1 \cdots i_p k}=0$ for $\forall i_1 \cdots i_p \in  \{i_1 \cdots i_p|\omega_{i_1 \cdots i_p}\neq 0\}$
+    \par $\therefore$ $k$ must be a common index of all non-zero $\omega_{i_1 \cdots i_p}$
+    \par $\therefore$ $q\leqslant p$
+    \par $(\Rightarrow):$ Under the previous setting, let $q=p$
+    \par $\therefore$ $\{1,2,\cdots,p\}$ are all common indices of all non-zero $\omega_{i_1 \cdots i_p}$
+    \par $\therefore$ Only $\omega_{1\cdots p}\neq 0 \Rightarrow \omega =\omega_{1\cdots p} e_1 \wedge \cdots \wedge e_p$
+    \par $(\Leftarrow):$ Let $\omega =v_1 \wedge \cdots \wedge v_q$
+    \par Apparently $\{v_1 \cdots v_p\}$ are linearly independent
+    \par $\therefore$ $\{v_1 \cdots v_p\}$ can be the basis of $M_{\omega} $\qed
+\end{enumerate}
