@@ -6,7 +6,7 @@
 \usepackage{parskip}
 \usepackage{fancyhdr}
 \usepackage{commath}%定义d
-%\usepackage[UTF8]{ctex}
+\usepackage[UTF8]{ctex}
 \usepackage{geometry}   
 \usepackage{titlesec}
 \usepackage{caption}
@@ -38,7 +38,8 @@
 \geometry{bottom=4cm}
 
 \newcommand{\sgn}{\mathop{\mathrm{sgn}}}
-
+\ctexset{today=old}
+\renewcommand\contentsname{Contents}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -57,7 +58,7 @@
 \definecolor{PKUred}{RGB}{126,24,28}
 
 %超链接设置
-\usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=PKUred,urlcolor=black,pagebackref,bookmarksnumbered]{hyperref}
+\usepackage[breaklinks,colorlinks,linkcolor=PKUred,citecolor=PKUred,urlcolor=black,pagebackref,bookmarksnumbered]{hyperref}
 
 
 \newcommand{\hsp}{\hspace{20pt}}

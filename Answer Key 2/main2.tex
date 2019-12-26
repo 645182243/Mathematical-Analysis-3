@@ -11,15 +11,15 @@
 
      \item[(3)]
      $\ln [(1+\frac{1}{n})^n]=n \ln (1+\frac{1}{n})=1-\frac{1}{2n}+o(\frac{1}{n})$
-     \par $\therefore$ $(1+\frac{1}{n})^n=e^{1-\frac{1}{2n}+o(\frac{1}{n})}=e-\frac{e}{2n}+o(\frac{1}{n})$
-     \par $\therefore$ $\lim\limits_{n\rightarrow{\infty}}\frac{a_n}{(\frac{e}{2n})^p}=1$
+     \par $\therefore$ $(1+\frac{1}{n})^n=\me^{1-\frac{1}{2n}+o(\frac{1}{n})}=\me-\frac{\me}{2n}+o(\frac{1}{n})$
+     \par $\therefore$ $\lim\limits_{n\rightarrow{\infty}}\frac{a_n}{(\frac{\me}{2n})^p}=1$
      \par $ \begin{cases} p>1:\text{absolutely convergent}\\ p \leqslant 1:\text{divergent} \end{cases} $
    \end{enumerate}
 
    \item
    \begin{enumerate}[(1)]
      \item
-     $\lim\limits_{n\rightarrow{\infty}}\sqrt[n]{(1-\frac{1}{n})^{n^2}}=\lim\limits_{n\rightarrow{\infty}}(1-\frac{1}{n})^n=\frac{1}{e}<1$
+     $\lim\limits_{n\rightarrow{\infty}}\sqrt[n]{(1-\frac{1}{n})^{n^2}}=\lim\limits_{n\rightarrow{\infty}}(1-\frac{1}{n})^n=\frac{1}{\me}<1$
      \par $\therefore$ absolutely convergent
 
      \item
@@ -37,7 +37,7 @@
 
      \item
      $\frac{1}{a^{\ln x}}=\frac{1}{x^{\ln a}}$
-     \par $\begin{cases} a>e:\ln a>1,\text{absolutely convergent}\\a\leqslant e:\ln a\leqslant 1,\text{divergent} \end{cases}$
+     \par $\begin{cases} a>\me:\ln a>1,\text{absolutely convergent}\\a\leqslant \me:\ln a\leqslant 1,\text{divergent} \end{cases}$
    \end{enumerate}
 
    \item
@@ -111,14 +111,14 @@
    \begin{enumerate}[(1)]
      \item
      Let $b_k=a_{3k+1}+a_{3k+2}+a_{3k+3}$
-     \par $\left|b_k\right|$ monotonically decreases to $0$ and $\sgn (\frac{b_k}{b_{k-1}})=-1$
+     \par $\left|b_k\right|$ monotonically decreases to $0$ and $\sgn \left(\frac{b_k}{b_{k-1}}\right)=-1$
      \par Use the conclusion of Lec 04 Problem 05, $a_n$ converges
      \par $\because$ $\left|a_n\right|=\frac{1}{n}$
      \par $\therefore$ conditionally convergent
 
      \item
      For $a\not= 0$, $n\sqrt{1+\frac{a^2}{n^2}}=n+\frac{a^2}{2n}+o(\frac{1}{n})$
-     \par $\therefore$ $a_n=(-1)^n\sin (\frac{\pi a^2}{2n})+o(\frac{1}{n})$
+     \par $\therefore$ $a_n=(-1)^n\sin \left(\frac{\pi a^2}{2n}\right)+o\left(\frac{1}{n}\right)$
      \par $\left|a_n\right|$ monotonically decreases to $0$ and $\sgn (\frac{a_n}{a_{n-1}})=-1$
      \par $\therefore$ $a_n$ converges
      \par $\because$ $\lim\limits_{n\rightarrow{\infty}}\frac{\sin \frac{\pi a^2}{2n}}{\frac{1}{100n}}>1$
@@ -129,7 +129,7 @@
       \end{cases}$
 
      \item
-     $\ln \left(1+\frac{(-1)^n}{n^p}\right)=\frac{(-1)^n}{n^p}-\frac{1}{n^{2p}}+o(\frac{1}{n^{2p}})$
+     $\ln \left(1+\frac{(-1)^n}{n^p}\right)=\frac{(-1)^n}{n^p}-\frac{1}{n^{2p}}+o\left(\frac{1}{n^{2p}}\right)$
      \par For $p>0$, $\left|\frac{(-1)^n}{n^p}\right|$ monotonically decreases to $0$ and $\sgn \left( \frac{\frac{(-1)^n}{n^p}}{\frac{(-1)^{n-1}}{(n-1)^p}}\right) =-1$
      \par $\sum\limits_{n=1}^{\infty}\frac{1}{n^{2p}}$ converges when $p>\frac{1}{2}$, diverges when $p\leqslant\frac{1}{2}$
      \par $\sum\limits_{n=1}^{\infty}\frac{1}{n^{p}}$ converges when $p>1$, diverges when $p\leqslant 1$

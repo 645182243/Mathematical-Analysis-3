@@ -2,10 +2,12 @@
 \subsection{Lec 01}
 \begin{enumerate}[1]
 	\item[1]
-	Use reduction to absurdity. Suppose \(\lim \limits_{n \rightarrow \infty} a_{n} \neq 0\) or doesn't exist. So \(\exists \varepsilon>0,\)
-	\(\forall N_{1}>0, \exists n>N_{1},\left|a_{n}\right|>3 \varepsilon .\) For such \(\varepsilon, \exists N_{2}>0, \forall n>N_{2},\left|a_{2 n}+2 a_{n}\right|<\varepsilon\)
-	So \(\exists N>N_{2},\left|a_{N}\right|>3 \varepsilon\) and \(\left|a_{2 N}+2 a_{N}\right|<\varepsilon .\) So \(\left|a_{2 N}\right|>5 \varepsilon .\) Similarly,
-	\(\left|a_{4 N}\right|>9 \varepsilon,\) and then \(\left|a_{2^{p} N}\right|>\left(2^{p+1}+1\right) \varepsilon\) for \(p \in \mathbb{N},\) which contradict the boundedness of \(a_{n} .\)
+	Use reduction to absurdity. Suppose \(\lim \limits_{n \rightarrow \infty} a_{n} \neq 0\) or doesn't exist.
+	\par \(\therefore \exists \varepsilon>0,\)
+	\(\forall N_{1}>0,\  \exists n>N_{1},\ \left|a_{n}\right|>3 \varepsilon .\) For such \(\varepsilon,\ \exists N_{2}>0,\ \forall n>N_{2},\ \left|a_{2 n}+2 a_{n}\right|<\varepsilon\)
+	\par \(\therefore \exists N>N_{2},\ \left|a_{N}\right|>3 \varepsilon\) and \(\left|a_{2 N}+2 a_{N}\right|<\varepsilon \) 
+	\par \(\therefore \left|a_{2 N}\right|>5 \varepsilon .\) similarly,
+	\(\left|a_{4 N}\right|>9 \varepsilon\) and then \(\left|a_{2^{p} N}\right|>\left(2^{p+1}+1\right) \varepsilon\) for \(p \in \mathbb{N},\) which contradict the boundedness of \(a_{n} \)
 	$\qedhere$ \qed
 	
 	\item[2]
@@ -39,8 +41,8 @@
 	\item 
 	The proof for \(\varlimsup \limits_{n \rightarrow \infty} y_{n}=\pm \infty\) is direct. Suppose \(\varlimsup \limits_{n \rightarrow \infty} y_{n}=A .\)\\
 	\(\forall \varepsilon_{1}>0, \exists N_{1}\left(\varepsilon_{1}\right)>0,\  \forall n>N_{1}\left(\varepsilon_{1}\right),\  y_{n}<A+\varepsilon_{1},\) and \(\exists\left\{y_{n_{k}^{\varepsilon_{1}}}\right\},\  y_{n_{k}^{\varepsilon_{1}}}>\)	\(A-\varepsilon_{1}\)\\
-	\(\forall \varepsilon_{2}>0, \exists N_{2}\left(\varepsilon_{2}\right)>0,\  \forall n>N_{2}\left(\varepsilon_{2}\right),\ \left|x_{n}-x^{*}\right|<\varepsilon_{2},\  x^{*}=\lim \limits_{n \rightarrow \infty} x_{n}\)\\
-	\(\forall \varepsilon>0, \exists \varepsilon_{1}>0,\  \varepsilon_{2}>0, \forall \delta_{1} \in\left(0, \varepsilon_{1}\right),\  \delta_{2} \in\left(-\varepsilon_{2}, \ \varepsilon_{2}\right),\) s.t. \(0 \leqslant \frac{\delta_{1}}{x^{*}+\delta_{2}}-\)
+	\(\forall \varepsilon_{2}>0,\ \exists N_{2}\left(\varepsilon_{2}\right)>0,\  \forall n>N_{2}\left(\varepsilon_{2}\right),\ \left|x_{n}-x^{*}\right|<\varepsilon_{2},\  x^{*}=\lim \limits_{n \rightarrow \infty} x_{n}\)\\
+	\(\forall \varepsilon>0,\ \exists \varepsilon_{1}>0,\  \varepsilon_{2}>0,\ \forall \delta_{1} \in\left(0, \varepsilon_{1}\right),\  \delta_{2} \in\left(-\varepsilon_{2}, \ \varepsilon_{2}\right),\) s.t. \(0 \leqslant \frac{\delta_{1}}{x^{*}+\delta_{2}}-\)
 	\(\frac{A \delta_{2}}{x^{*}\left(x^{*}+\delta_{2}\right)}<\varepsilon,\) and \(0 \leqslant \frac{\delta_{1}}{x^{*}}+\frac{\left(A-\delta_{1}\right) \delta_{2}}{x^{*}\left(x^{*}+\delta_{2}\right)}<\varepsilon\)\\
 	\(\therefore\) for \(\forall \varepsilon>0,\  \exists N=\max \left(N_{1}\left(\varepsilon_{1}\right),\  N_{2}\left(\varepsilon_{2}\right)\right),\  \forall n>N,\ \left(x_{n} y_{n}\right)>x^{*} A+\varepsilon\) \\
 	and \(\exists\left\{y_{n_{k}^{\varepsilon_{1}}} x_{n_{k}^{\varepsilon_{1}}}\right\},\  y_{n_{k}^{\varepsilon_{1}}} x_{n_{k}^{\varepsilon_{1}}}>x^{*} A-\varepsilon\)\qed
@@ -66,7 +68,7 @@
 	\item 
 	For a period of \(n=0 \sim 9 \bmod 10,\) maximum \(a_{n}\) is \(\sin \frac{2 \pi}{5},\) minimum \(a_{n}\) is
 	\(-\sin \frac{2 \pi}{5}\)\\
-	\(\therefore \varlimsup \limits_{n \rightarrow \infty} a_{n}=\lim \limits_{n \rightarrow \infty} \sup \limits_{k \geqslant n} a_{k}=\sin \frac{2 \pi}{5}, \varliminf \limits_{n \rightarrow \infty} a_{n}=\lim \limits_{n \rightarrow \infty} \inf \limits_{k \geqslant n} a_{k}=-\sin \frac{2 \pi}{5}\)
+	\(\therefore \varlimsup \limits_{n \rightarrow \infty} a_{n}=\lim \limits_{n \rightarrow \infty} \sup \limits_{k \geqslant n} a_{k}=\sin \frac{2 \pi}{5},\ \varliminf \limits_{n \rightarrow \infty} a_{n}=\lim \limits_{n \rightarrow \infty} \inf \limits_{k \geqslant n} a_{k}=-\sin \frac{2 \pi}{5}\)
 
 \end{enumerate}
 
@@ -77,8 +79,8 @@
 \begin{enumerate}[1]
 	\item[1]
 	Suppose \(\varlimsup \limits_{n \rightarrow \infty} na_{n}>0 .\) Then just suppose \( \varlimsup \limits_{n \rightarrow \infty} na_{n} \geqslant 1\)\\
-	\(\therefore \exists\left\{a_{n_{k}}\right\}, a_{n_{k}} \geqslant \frac{1}{n_{k}}\)\\
-	Then \(\exists\left\{a_{n_{k_{l}}}\right\}, n_{k_{l+1}} \geqslant 2 n_{k_{l}}\)\\
+	\(\therefore \exists\left\{a_{n_{k}}\right\},\ a_{n_{k}} \geqslant \frac{1}{n_{k}}\)\\
+	Then \(\exists\left\{a_{n_{k_{l}}}\right\},\ n_{k_{l+1}} \geqslant 2 n_{k_{l}}\)\\
 	\(\therefore \sum\limits_{n=1}^{\infty} a_{n} \geqslant \sum\limits_{l=2}^{\infty}\left(\frac{n_{k_{l}}}{2} \frac{1}{n_{k_{l}}}\right)=\infty\)\\
 	\(\therefore \varlimsup \limits_{n \rightarrow \infty} n a_{n}=0\)\\
 	\(\because \varliminf \limits_{n \rightarrow \infty}  n a_{n} \geqslant 0\)\\
@@ -115,13 +117,13 @@
 	
 \begin{enumerate}[(1)]
 	\item 
-	\(\forall \varepsilon>0, \exists N>\log _{|q|} \frac{\varepsilon(1-|q|)}{A}, \forall n_{1}, n_{2}>N\)\\
+	\(\forall \varepsilon>0,\  \exists N>\log _{|q|} \frac{\varepsilon(1-|q|)}{A},\  \forall n_{1},\  n_{2}>N\)\\
  	\(\sum\limits_{n=n_{1}}^{n_{2}}\left|a_{n} q^{n}\right| \leqslant A \sum\limits_{n=n_{1}}^{n_{2}}|q|^{n}=A|q|^{n_{1}} \frac{1-|q|^{n_{2}-n_{1}+1}}{1-|q|}<\varepsilon\)\\
 	\(\therefore\) absolutely convergent
 
 	\item 
 	\(\because a_n=\frac{1}{3 n-2}+\frac{1}{3 n-1}-\frac{1}{3 n}>\frac{1}{3 n}\)\\
-	\(\therefore \exists \varepsilon=1>0, \forall N>0,\  \exists n_{1} >N,\ n_2=3n_1+10>N	\)\\
+	\(\therefore \exists \varepsilon=1>0,\  \forall N>0,\  \exists n_{1} >N,\ n_2=3n_1+10>N	\)\\
 	\(\sum\limits_{n=n_{1}}^{n_{2}} a_{n}>\sum\limits_{n=n_1}^{n_2} \frac{1}{3 n}>\frac{2n_2}{3}\frac{1}{3n_2}>\frac{2}{9}\)\\
 	\(\therefore\) divergent
 
@@ -130,7 +132,7 @@
 	\item[5]   	
 	
 	Let \(b_{k}=\sum\limits_{n=n_{k-1}+1}^{n_{k}} a_{n}\)\\
-	\(\therefore \forall \varepsilon>0, \exists K>0, \forall k_{1}, k_{2}>K,\ \left|\sum\limits_{k=k_{1}}^{k_{2}} b_{k}\right|<\varepsilon\)\\
+	\(\therefore \forall \varepsilon>0,\ \exists K>0,\ \forall k_{1},k_{2}>K,\ \left|\sum\limits_{k=k_{1}}^{k_{2}} b_{k}\right|<\varepsilon\)\\
 	\(\therefore \exists N>n_{K+1}+1,\  \forall n_{1}, n_{2}>N,\ \left|\sum\limits_{n=n_{1}}^{n_{2}} a_{n}\right|<\left|\sum\limits_{k=K}^{\infty} b_{k}\right| \leqslant \varepsilon\)\\
 	\(\therefore\) absolutely convergent
 	
