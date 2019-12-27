@@ -21,9 +21,14 @@
     \par $ \Dif \varphi_{\alpha} = \begin{bmatrix} E_{(n-k)\times (n-k)} & 0_{(n-k)\times k} \\\Dif f_{k\times (1\sim (n-k))} &\Dif f_{k\times ((n-k+1)\sim n )} \end{bmatrix}$
     \par $\because \forall x_0 \in U_{\alpha} $ rank$(\Dif f(x_0) )= k $, assume that rank$(\Dif f(x_0)_{k\times ((n-k+1)\sim n )} )= k $
     \par $\therefore \det \Dif \varphi_{\alpha} \not= 0 $
-    \par according to implicit function theorem, $ \exists $ open set $ U \ni x_0 $, open set $ V \ni \varphi_{\alpha}(x_0)$ s.t. $ \varphi_{\alpha}: U \mapsto V$ is a diffeomorphism
-    \par $ \varphi_{\alpha}: U\cap M \mapsto V \cap \{(y_1,\cdots,y_n)\in \mathbb{R}^n | y_{n-k+1} = \cdots = y_n=0 \}$
-    \par $ \therefore M$ is a (n-k)-dimensional differential manifold\qed
+    \par according to implicit function theorem, $ \exists $ open set $ U \ni x_0 $, open set $ V \ni \varphi_{\alpha}(x_0)$ s.t. 
+    \begin{itemize}
+        \item 
+        $ \varphi_{\alpha}: U \mapsto V$ is a diffeomorphism
+        \item 
+        $ \varphi_{\alpha}: U\cap M \mapsto V \cap \{(y_1,\cdots,y_n)\in \mathbb{R}^n | y_{n-k+1} = \cdots = y_n=0 \}$
+    \end{itemize}  
+    $ \therefore M$ is a (n-k)-dimensional differential manifold\qed
 \end{enumerate}
 
 \subsection{P128}
